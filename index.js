@@ -12,7 +12,6 @@ app.use(cors());
 
 app.get('/videos', (req, res)=>{
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.PLAYLIST_ID}&maxResults=50`;
-    fetch(`${url}&key=AIzaSyCqTWBjEdMrNu3bgih-b6ehX3JbgoImEWw`)
     fetch(`${url}&key=${process.env.API_KEY}`)
     .then(response=> response.json())
     .then(json => {
