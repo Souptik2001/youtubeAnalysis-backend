@@ -69,16 +69,6 @@ app.get('/videos', (req, res)=>{
             });
         }); 
     }
-    // if (req.query.pageToken==undefined){
-    //     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${process.env.PLAYLIST_ID}&maxResults=50`;
-    // }else{
-    //     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&pageToken=${req.query.pageToken}&playlistId=${process.env.PLAYLIST_ID}&maxResults=50`;
-    // }
-    // fetch(`${url}&key=${process.env.API_KEY}`)
-    // .then(response=> response.json())
-    // .then(json => {
-    //     res.json(json);
-    // });
 });
 
 function notFound(req, res, next){
